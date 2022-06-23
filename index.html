@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>蓝诗词官网</title>
+		<style>
+			*{
+				padding: 0px;
+				margin: 0px;
+				list-style: none;
+			}
+			
+			.container{
+				width: 1920px;
+				height: 3720px;
+			
+				margin: auto;
+			}
+		
+			.header{
+				margin: 12px;
+				width: 1888px;
+				height: 100px;
+			background-color: #3e5e5e;
+			}
+			.shopping{
+				width: 80px ;
+				height: 80px;
+				float: right;
+				margin: 10px;
+				
+			}
+			.shopping-logo>img{
+				margin: 5px 0 0 0;
+				width: 40px;
+				height: 40px;
+				
+			}
+			.item{
+				width: 1720px;
+				height: 80px;
+				margin: 2px 40px;
+				
+				padding: 5px;
+			}
+			.head-item{
+				float: left;
+				width: 1000px;
+				height: 80px;
+				
+				margin: 5px auto;
+			
+			}
+			/* 二级菜单 */
+			.head-item a{
+			padding: 10px 20px;
+			text-decoration: none;
+			color: #e1e1e1;
+			font-size: 20px;
+			}
+			.head-item ul li{float: left;}
+			.head-item ul li a{
+			            
+			            width: 90px;
+			            height: 50px;
+			            text-align: center;
+			            line-height: 50px;
+			            display: inline-block;
+			        }
+			.head-item ul li a:hover{
+			            color: #5f5f47;
+			            background: coral;
+			        }
+			.cd {
+			            width:130px;
+			            position: absolute;
+			            display:none;
+			            background: rgb(85, 85, 85);
+			            color: rgb(8, 7, 12);
+						text-align: center;
+			        }
+			.cd li{
+				font-size: 25px;
+				padding: 10px;
+			}
+			.head-item  li:hover .cd{
+			              display: block;
+						  color: #b9b9b9;
+						  
+			                
+			        } 
+			.cd li :hover a{
+			            background: #fff;
+			                color: black;
+							}
+			.head-item :hover a{
+			
+				color: #aaaaaa;
+			}
+			/* 二级菜单 */
+			
+			/* 登录注册 */
+			.login{
+				width: 300px;
+				height: 80px;
+				float: right;
+				
+			}
+			.login span{
+			padding: 20px 30px;
+			text-align: center;
+			line-height: 80px;
+			font-size: 20px;
+			color: #e5e5e5;
+			}
+			.login a{
+				text-decoration: none;
+			}
+			.regiest a{
+				text-decoration: none;
+			}
+			
+			.regiest{
+				width: 300px;
+				height: 80px;
+				float: right;
+			
+				margin: 0 40px;
+				
+			}
+				.regiest span{
+				padding: 20px 30px;
+				text-align: center;
+				line-height: 80px;
+				font-size: 20px;
+				color: #e5e5e5;
+				}
+			
+			/* 登录注册 */
+			
+			/* 轮播图 */
+		
+			.banner{
+				position: relative;
+				overflow: hidden;
+				margin: 100px auto;
+				width: 1480px;
+				height: 250px;
+			}
+			.banner ul{
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			.hot{
+				position: absolute;
+				top:0;
+				left: 0;
+			}
+			.hot li{
+				float: left;
+			}
+			.dot{
+				position: absolute;
+				bottom: 10px;
+				width: 100%;
+				text-align: center;
+				font-size: 0;
+			}
+			.dot li{
+				display: block;
+				display: inline-block;
+				margin: 0 5px;
+				width: 15px;
+				height: 15px;
+				border-radius: 100%;
+				background: rgba(145,144,144,.5);
+				cursor: pointer;
+			}
+			.dot .on{
+				background-color: #ff0000;
+			}
+			.arrow{
+				display: none;
+			}
+			.arrow span{
+				display: block;
+				width: 50px;
+				height: 100px;
+				background: rgb(0,0,0,.6);
+				color: #ffffff;
+				text-align: center;
+				font-size: 40px;
+				line-height: 100px;
+			}
+			.arrow .prev{
+				position: absolute;
+				top:50%;
+				left: 0;
+				margin-top: -50px;
+			}
+			.arrow >.next{
+				position: absolute;
+				top: 50%;
+				right: 0;
+				margin-top: -50px;
+			}
+			/* 轮播图 */
+			
+			
+			
+			/* 内容 */
+			.content{
+				width: 1888px;
+				margin: 12px;
+				height: 3065px;
+				
+			}
+		
+			.box{
+				width: 1788px;
+				height: 2610px;
+				margin: 45px;
+				
+			}
+			h2{
+				font-size: 36px;
+				margin: 5px 0 5px 15px;
+			}
+			.phb{
+				width: 1700px;
+				height: 500px;
+				margin: 15px auto;
+				
+			}
+			.phb-content{
+				width: 1680px;
+				height: 420px;
+				
+				margin: 10px auto;
+				}
+				.zp{
+					width: 375px;
+					height: 400px;
+					
+					margin: 10px 20px;
+					float: left;
+				}
+				.zp img{
+					width:184px ;
+					height: 258px;
+					margin: 10px 100px 0 100px ;
+					cursor: pointer;
+					transition: all 0.5s;
+				}
+				.zp img:hover{
+							transform: scale(1.2);
+						}
+				.zp h3{
+					margin: 30px 0 0 5px;
+				}
+				.zp p{
+							font-size: 30px;
+							margin: 10px 0 0 10px;
+							color: #5f5f47;
+						}
+			/* 内容 */
+			.footer{
+				margin: 12px;
+				width: 1888px;
+				height:80px;
+				background-color: #3e5e5e;
+				color: #e5e5e5;
+			}
+			.footer-id{
+				margin: 20px 450px;
+				line-height: 80px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="header">
+				
+				<div class="shopping" ><a href="购物车.html"><div class="shopping-logo"><img src="img/shopping logo.png" ><p>购物车</p></div></a></div>
+				<div class="item">
+					<div class="head-item">
+						<ul>
+							
+							<li><a href="#">首页</a>
+								<ul class="cd">
+									
+									
+								</ul>
+							</li>
+							<li><a href="#">活动优惠</a>
+								<ul class="cd">
+								
+									<li>免费领券</li>
+								</ul>
+							</li>
+							<li><a href="#">好书推荐</a>
+								<ul class="cd">
+									<li>小说合集</li>
+									<li>散文精选</li>
+									
+								</ul>
+							</li>
+							<li><a href="#">学习资源</a>
+								<ul class="cd">
+									<li>关注我们</li>
+									
+								</ul>
+							</li>
+							<li><a href="#">关于我们</a>
+								<ul class="cd">
+									<li>蓝诗词网</li>
+									<li>运营执照</li>
+									
+								</ul>
+							</li>
+							<li><a href="#">排行榜</a>
+								<ul class="cd">
+									<li>最高人气</li>
+									<li>最多购买</li>
+									
+								</ul>
+							</li>
+							<li><a href="jtym.html">客户服务</a>
+								<ul class="cd">
+									
+									<li>联系我们</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="regiest">
+							<p><a href="注册.html"><span>一键注册</span></a><a href="注册.html"><span>忘记密码？</span></a></p>
+					</div>
+					<div class="login">
+							<p><a href="注册.html"><span>登录</span></a><a href="smdl.html"><span class="sm">扫码快速登录</span></a></p>
+					</div>
+				</div>
+				
+			</div>
+			<div class="content">
+				<div class="banner">
+					<ul class="hot">
+						<li><a href="#"><img src="img/1.jpg"></a></li>
+						<li><a href="#"><img src="img/2.jpg"></a></li>
+						<li><a href="#"><img src="img/3.jpg"></a></li>
+					
+					</ul>
+					<ul class="dot">
+						<li class="on"></li><li></li><li></li>
+					</ul>
+					<div class="arrow">
+						<span class="prev">&lt;</span><span class="next">&gt;</span>
+					</div>
+				</div>
+				<div class="box">
+					<div class="phb">
+						<h2>畅销小说排行榜</h2>
+						<hr>
+						<div class="phb-content">
+							<div class="zp"><img  src="img/xs1.jpg"/><h3>福尔摩斯探案集(套装共8册)：推理小说中的“圣经”</h3><p>¥87.09 </p></div>
+							<div class="zp"><img  src="img/xs2.jpg"/><h3>房思琪的初恋乐园【豆瓣9.2！超16万人评论！令人心碎却无能为力的真实故事！向死而生的文学绝唱！】</h3><p>¥19.99 </p></div>
+							<div class="zp"><img  src="img/xs3.jpg"/><h3>历史的细节（全五卷）（博物馆里的《人类简史》</h3><p>¥59.99 </p></div>
+							<div class="zp"><img  src="img/xs4.jpg"/><h3>法医秦明.幸存者,畅销600万册原创悬疑品牌,法医秦明十周年典藏版！根据真实案件改编</h3><p>¥25.99 </p></div>
+						</div>
+					</div>
+					<div class="phb">
+						<h2>畅销散文排行榜</h2>
+						<hr>
+						<div class="phb-content">
+							<div class="zp"><img  src="img/sw1.jpg"/><h3>你当像鸟飞往你的山（比尔·盖茨年度特别推荐，登顶《纽约时报》畅销榜80 周！多一个人读到这个真实故事，就多一个人勇敢做自己！）</h3><p>¥24.9 </p></div>
+							<div class="zp"><img  src="img/sw2.jpg"/><h3>季羡林散文（清华剑客，北大泰斗，世纪风雨赤子心。沉淀百年的人生智慧，静观天地自在心） (名家散文珍藏) </h3><p>¥27.09 </p></div>
+							<div class="zp"><img  src="img/sw3.jpg"/><h3>紫色菩提 (菩提十书(全10册)+你心柔软</h3><p>¥123.99 </p></div>
+							<div class="zp"><img  src="img/sw4.jpg"/><h3>人间有味是清欢林清玄数字版图书国内首次上架！精选清欢三卷中有关人生主题的30篇经典篇目和8幅手绘古风插画！</h3><p>¥29 </p></div>
+						</div>
+					</div>
+					<div class="phb">
+						<h2>畅销诗词排行榜</h2>
+						<hr>
+						<div class="phb-content">
+							<div class="zp"><img  src="img/sc1.jpg"/><h3>中华好诗词：唐宋诗词名家精品类编（读客熊猫君出品，套装共10册。世代相传的唐宋经典佳作，国内研究诗词权威专家联袂打造，点评也精彩！）</h3><p>¥19.99 </p></div>
+							<div class="zp"><img  src="img/sc2.jpg"/><h3>唐宋名家诗词·全十三册</h3><p>¥249.60 </p></div>
+							<div class="zp"><img  src="img/sc3.jpg"/><h3>中国最美传世诗词 (书立方系列·品读经典) </h3><p>¥19.99</p></div>
+							<div class="zp"><img  src="img/sc4.jpg"/><h3>诗词声律启蒙 (中华书局) </h3><p>¥18.89 </p></div>
+						</div>
+					</div>
+					<div class="phb">
+						<h2>科技文学推荐</h2>
+						<hr>
+						<div class="phb-content">
+							<div class="zp"><img  src="img/kj1.jpg"/><h3>《几何原本》（一晚上的时间，看懂逻辑演绎的本质，建立强大的理性思维逻辑！如果没有这本书，人类社会至少倒退1000年！）</h3><p>¥9.99 </p></div>
+							<div class="zp"><img  src="img/kj2.jpg"/><h3>探寻中华文明变迁（套装共12册）</h3><p>¥99.99</p></div>
+							<div class="zp"><img  src="img/kj3.jpg"/><h3>湛庐·2021经典好书系列套装（15册）（湛庐2021年关于投资、商业、管理、科技、个人成长等方面的经典好书，2位诺奖得主、30位心理学、经济、营销、管理、商业领域大咖联袂推荐）</h3><p>¥89.99</p></div>
+							<div class="zp"><img  src="img/kj4.jpg"/><h3>世界奇幻地图：古老又荒诞不经的神话、谎言和谬误（《诡图》简体中文版震撼上市！奇幻巨作，想象瑰丽，堪称世界版《山海经》！ 英国皇家地理学会会士、著名地图专家爱德华重磅作品！ ）</h3><p>¥59.99</p></div>
+						</div>
+					</div>
+					<div class="phb">
+						<h2>经管</h2>
+						<hr>
+						<div class="phb-content">
+							<div class="zp"><img  src="img/jg1.jpg"/><h3>怪诞行为学:可预测的非理性（认识到我们的非理性，才能更好地做出决策。非理性是人类的本能，是主宰人类行为和决策的隐性力量）</h3><p>¥87.09 </p></div>
+							<div class="zp"><img  src="img/jg2.jpg"/><h3>富爸爸系列全集（套装共31册）</h3><p>¥169.90</p></div>
+							<div class="zp"><img  src="img/jg3.jpg"/><h3>欲望资本主义（套装共4册）（本书全面揭示欲望滋生欲望的资本主义， 诺贝尔经济学奖得主、捷克总统顾问、原麦肯锡投资人联袂推荐）</h3><p>¥19.99 </p></div>
+							<div class="zp"><img  src="img/jg4.jpg"/><h3>中国货币史（校订版）豆瓣9.5分，好评如潮！</h3><p>¥29.99</p></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer"><h3 class="footer-id">了解我们    人才招聘     蓝诗词科学合作信息     我要开店       加入联盟       帮助中心和购物指南        付款与退款退货与换货      帮助中心</h3></div>
+		</div>
+		<script src="js/jquery-1.12.4.min.js"></script>
+		<script>
+			// 轮播图
+			$(function(){
+				var width=1500;
+				var firstimg=$('.hot li').first().clone();
+				$('.hot').append(firstimg).width($('.hot li').length*width);
+				
+				var timer=null;
+				var delay=1500;
+				timer=setInterval(imgChange,delay);
+				//可改为timer=setInterval(imgChange,1000);
+				var i=0;
+				function imgChange(){//轮播函数
+					++i;
+					isCrack();
+					dotChange();
+				}
+				var speed=400;
+				function isCrack(){
+					if(i==$('.hot li').length){
+						i=1;
+						$('.hot').css({left:0});
+					}
+					$('.hot').stop().animate({left:-i*width},speed);
+				}
+				function dotChange(){//圆点切换函数
+					if(i==$('.hot li').length-1){
+						$('.dot li').eq(0).addClass('on').siblings().removeClass('on');
+					}else{
+						$('.dot li').eq(i).addClass('on').siblings().removeClass('on')
+					}
+				}
+				//停止动画
+				$('.banner').hover(function(){
+					clearInterval(timer)
+				},function(){
+					timer=setInterval(imgChange,delay)
+				})
+				//左右箭头
+				$('.banner').hover(function(){
+					$('.arrow').show();
+				},function(){
+					$('.arrow').hide();
+				})
+				$('.next').click(function(){
+					imgChange()
+				})
+				$('.prev').click(function(){
+					i--;
+					if(i==-1){
+						i=$('.hot li').length-2;
+						$('.hot').css({left:-($('.hot li').length-1)*width})
+					}
+					$('.hot').stop().animate({left:-i*width},speed)
+					dotChange()
+				})
+				
+				$('.dot li').click(function(){
+					i=$(this).index();
+					$('.hot').stop().animate({left:-i*width},400)
+					dotChange();
+				})
+			});
+			// 轮播图
+		</script>
+	</body>
+</html>
